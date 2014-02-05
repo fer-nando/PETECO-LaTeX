@@ -1,0 +1,12 @@
+$...$  $$...$$  \[...\] displaymath
+
+\alpha \beta \gama \Gama \Delta \Theta
+x^2  x_y  x^{2b}  Fe^{56}_{26}
+\sin \cos \tan \log
+\frac{x}{y} \sqrt[n]{x}
+\int_a^b \sum_{k=1}{n}
+\lim_{x \to \infty}
+\left? ... \right?
+array
+
+\math??{}: rm, bf, sf, it, tt, cal

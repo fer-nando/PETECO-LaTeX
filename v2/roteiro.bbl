@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{maze}
+Walter~D. Pullen.
+\newblock Maze solving algorithms.
+\newblock \url{http://www.astrolog.org/labyrnth/algrithm.htm#solve}, Janeiro
+  2011.
+
+\bibitem{regraMao}
+Richard~T. Vannoy.
+\newblock Teaching a robot to solve a line maze.
+\newblock
+  \url{http://www.pololu.com/file/download/line-maze-algorithm.pdf?file_id=0J1%
+95}, Abril 2009.
+
+\end{thebibliography}

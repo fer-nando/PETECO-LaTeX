@@ -1,0 +1,146 @@
+\documentclass[a4paper]{article}
+
+%% Pacotes %%
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{hyperref}
+
+
+%% Título %%
+\title{Minicurso de \LaTeX}
+\author{PET-ECO}
+\date{2012/1}
+
+%% Comandos personalizados %%
+\newcommand{\mitem}[2]{
+	\begin{minipage}[c]{.5\textwidth}
+	\item #1
+	\end{minipage}
+	\fbox{\begin{minipage}[c]{.5\textwidth}
+	\small \tt #2
+	\end{minipage}}
+}
+
+%% Início do documento %%
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section*{Roteiro:}
+
+\
+
+\begin{enumerate}
+	\mitem
+		{O que é o \LaTeX}
+		{\LaTeX\ é um processador de textos.}
+	\mitem
+		{Como usar: Windows e Linux
+		\begin{enumerate}
+			\item O que percisa instalar
+			\item Editores
+		\end{enumerate}
+		}
+		{	Windows: \emph{MikTeX}\\
+			Linux: \emph{texlive}
+				
+			\hrulefill
+			
+			Windows: TexWorks, TeXnicCenter, TexMaker, \ldots \\
+			Linux: Kyle, TexMaker, Vim, Emacs  \ldots
+		}	
+	\mitem
+		{Hello World!}
+		{\verbatiminput{helloworld.tex}}
+	\mitem
+		{Acentuação e caracteres especiais}
+		{\# \ \$ \ \% \ \^{} \quad \& \ \_ \ \{ \ \} \ \~{} \quad \textbackslash
+		\verbatiminput{caracteres_especiais.txt}
+		\'{a} \quad \`{a} \quad \^{a} \quad \~{a} \quad \"{a} \quad \c{c}}
+	\mitem
+		{Pacotes}
+		{Pacotes adicionam novas funcionalidades ao \LaTeX \\
+		Ex: \emph{*inputenc}, \emph{*fontenc}, \emph{*babel}, \emph{hyperref}, \emph{geometry}, \emph{setspace},\ \ldots }
+	\mitem
+		{Espaçamento e alinhamento do texto}
+		{\verbatiminput{alinhamento.txt}
+		center, flushright, flushleft}
+	\mitem
+		{Fontes: tipo, tamanho, forma, \ldots}
+		{\verbatiminput{fontes.txt}}
+	\mitem
+		{Capítulos, seções, \ldots}
+		{\verbatiminput{capitulos.txt}
+		\textbackslash{}tableofcontents}
+	\mitem
+		{Listas}
+		{itemize, enumerate, description}
+	\mitem
+		{Modo matemático}
+		{pacotes \emph{amsmath} e \emph{amssymb}
+		\verbatiminput{modomatematico.txt}}
+	\mitem
+		{Equações matemáticas}
+		{equation, equation*, eqnarray, eqnarray*\\
+		\textbackslash{}nonumber}
+	\mitem
+		{Tabelas}
+		{\textbackslash{}begin\{tabular\}\{\emph{formatação}\} \ldots\\
+		Formatação:\\
+		c $\rightarrow$ centro\\
+		l $\rightarrow$ esquerdo\\
+		r $\rightarrow$ direito\\
+		p\{\emph{larg}\} $\rightarrow$ largura fixa,\\
+		@\{\emph{sep}\} $\rightarrow$ usa \emph{sep} entre colunas\\
+		\textbar $\rightarrow$ linha vertical entre colunas\\
+		Elementos:\\
+		\& $\rightarrow$ separador de coluna\\
+		\textbackslash{}hline ou \textbackslash{}cline\{x-y\} $\rightarrow$ linha hor.\\
+		\textbackslash{}multicolumn\{\emph{n}\}\{\emph{cols}\}\{\emph{text}\}
+		}
+	\mitem
+		{Figuras}
+		{pacote \emph{graphicx}\\
+		\textbackslash{}includegraphics[\emph{tam}]\{\emph{arquivo}\}}
+	\mitem
+		{Ambientes flutuantes}
+		{\textbackslash{}begin\{figure\}[\emph{pos}]\\
+		\textbackslash{}begin\{table\}[\emph{pos}]\\
+		\textbackslash{}caption\{\}
+		Posição:\\
+		h $\rightarrow$ aqui~\cite{maze} \\
+		t $\rightarrow$ topo~\cite{regraMao} \\
+		b $\rightarrow$ fim\\
+		p $\rightarrow$ página especial\\
+		! $\rightarrow$ forçado
+		}
+	\mitem
+		{Minipage}
+		{Inserir figuras, texto ou tabelas alinhados lado a lado.
+		\textbackslash{}minipage[\emph{pos}]\{\emph{tam}\}\{\emph{texto}\}}
+	\mitem
+		{Verbatim}
+		{package \emph{verbatim}\\
+		\textbackslash{}verb\textbar{}texto{}\textbar\\
+		\textbackslash{}begin\{verbatim\} ... \textbackslash{}end\{verbatim\}\\
+		\textbackslash{}verbatiminput\{arquivo\} }
+	\mitem
+		{Citações, notas de rodapé, \ldots}
+		{\textbackslash{}cite\{\} $\rightarrow$ bib\\
+		\textbackslash{}ref\{\} $\rightarrow$ \textbackslash{}label\{\} \\
+		\textbackslash{}pageref\{\} $\rightarrow$ página\\
+		\textbackslash{}footnote\{\} \\[6pt]
+		\textbackslash{}listoffigures\\
+		\textbackslash{}listoftables }
+	\mitem
+		{Referências bibliográficas\\
+		(BibTeX+JabRef)}
+		{\textbackslash{}bibliography\{file\}\\
+		\textbackslash{}bibliographystyle\{plain\}}
+\end{enumerate}
+
+%% Fim do documento %%
+\end{document}
